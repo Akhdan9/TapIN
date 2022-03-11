@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="id.my.slametbsan.absensifirebase">
+    package="id.my.ojrek.absensifirebase">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -22,11 +22,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="true">
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".CreateUserActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".MainActivity"
+        <activity android:name="id.my.ojrek.absensifirebase.DashboardActivity" />
+        <activity android:name="id.my.ojrek.absensifirebase.CreateUserActivity" />
+        <activity android:name="id.my.ojrek.absensifirebase.LoginActivity" />
+        <activity android:name="id.my.ojrek.absensifirebase.ProfileActivity" />
+        <activity android:name="id.my.ojrek.absensifirebase.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,7 @@
         </activity>
 
         <provider
-            android:authorities="id.my.slametbsan.absensifirebase"
+            android:authorities="id.my.ojrek.absensifirebase"
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">

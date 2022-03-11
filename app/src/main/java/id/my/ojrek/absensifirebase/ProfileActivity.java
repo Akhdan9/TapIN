@@ -1,6 +1,5 @@
-package id.my.slametbsan.absensifirebase;
+package id.my.ojrek.absensifirebase;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 

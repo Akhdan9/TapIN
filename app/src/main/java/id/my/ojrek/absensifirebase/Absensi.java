@@ -1,4 +1,4 @@
-package id.my.slametbsan.absensifirebase;
+package id.my.ojrek.absensifirebase;
 
 public class Absensi {
     private String waktu;

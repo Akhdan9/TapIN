@@ -6,7 +6,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "id.my.slametbsan.absensifirebase"
+        applicationId "id.my.ojrek.absensifirebase"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
