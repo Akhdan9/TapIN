@@ -25,7 +25,10 @@
         <activity android:name="id.my.ojrek.absensifirebase.DashboardActivity" />
         <activity android:name="id.my.ojrek.absensifirebase.CreateUserActivity" />
         <activity android:name="id.my.ojrek.absensifirebase.LoginActivity" />
-        <activity android:name="id.my.ojrek.absensifirebase.ProfileActivity" />
+        <activity android:name="id.my.ojrek.absensifirebase.ProfileActivity"
+            android:parentActivityName=".DashboardActivity">
+
+        </activity>
         <activity android:name="id.my.ojrek.absensifirebase.MainActivity"
             android:exported="true">
             <intent-filter>

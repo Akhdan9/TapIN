@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ECEFF1"
     tools:context=".DashboardActivity">
 
@@ -76,72 +76,72 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layoutAbsen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/fotoProfil"
+        android:background="#FFF"
         android:orientation="vertical"
         android:paddingTop="10dp"
-        android:paddingBottom="5dp"
-        android:background="#FFF"
-        android:id="@+id/layoutAbsen"
-        android:layout_below="@id/fotoProfil">
+        android:paddingBottom="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:paddingStart="20dp"
             android:text="Sekarang:"
-            android:fontFamily="sans-serif-light"
-            android:textSize="10sp"
-            android:paddingStart="20dp"/>
+            android:textSize="10sp" />
 
         <TextView
+            android:id="@+id/tvHariTanggal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kamis, 28 Mei 2020"
-            android:id="@+id/tvHariTanggal"
             android:fontFamily="sans-serif-medium"
-            android:paddingStart="20dp"/>
+            android:paddingStart="20dp"
+            android:text="Kamis, 28 Mei 2020" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lokasi:"
-            android:fontFamily="sans-serif-light"
-            android:textSize="10sp"
             android:layout_marginTop="10dp"
-            android:paddingStart="20dp"/>
+            android:fontFamily="sans-serif-light"
+            android:paddingStart="20dp"
+            android:text="Lokasi:"
+            android:textSize="10sp" />
 
         <TextView
+            android:id="@+id/tvLokasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvLokasi"
             android:fontFamily="sans-serif-medium"
-            android:text="Perumnas Blok S15, Gejagan, Kec. Loceret, Kabupaten Nganjuk, Jawa Timur 64471"
-            android:paddingStart="20dp"/>
+            android:paddingStart="20dp"
+            android:text="Perumnas Blok S15, Gejagan, Kec. Loceret, Kabupaten Nganjuk, Jawa Timur 64471" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <Button
+                android:id="@+id/btnHadir"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
-                android:id="@+id/btnHadir"
-                android:text="ABSEN HADIR"/>
+                android:layout_weight="1"
+                android:text="ABSEN HADIR" />
 
             <Button
+                android:id="@+id/btnPulang"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="10dp"
-                android:id="@+id/btnPulang"
-                android:text="ABSEN PULANG"/>
+                android:layout_weight="1"
+                android:text="ABSEN PULANG" />
         </LinearLayout>
     </LinearLayout>
 

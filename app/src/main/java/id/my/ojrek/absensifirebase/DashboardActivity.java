@@ -15,7 +15,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -58,7 +60,9 @@ import java.util.Locale;
 import java.util.TimeZone;
 import java.util.UUID;
 
-public class DashboardActivity extends AppCompatActivity implements LocationListener {
+public class DashboardActivity extends AppCompatActivity implements LocationListener  {
+
+
     //definisi object firebase
     private static FirebaseDatabase firebaseDatabase;
     private DatabaseReference database;
@@ -305,6 +309,7 @@ public class DashboardActivity extends AppCompatActivity implements LocationList
     //definisikan variabel untuk longitude dan latitude GPS
     double longitude;
     double latitude;
+
 
     @Override
     public void onLocationChanged(Location location) {
