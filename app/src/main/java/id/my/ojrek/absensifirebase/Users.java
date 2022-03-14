@@ -7,12 +7,18 @@ public class Users implements Serializable {
     private String nama;
     private String email;
     private String telepon;
+    private String instagram;
+    private String facebook;
+    private String twitter;
     private Boolean admin;
 
-    public Users(String nama, String email, String telepon, Boolean admin) {
+    public Users(String nama, String email, String telepon, String instagram, String facebook, String twitter, Boolean admin) {
         this.nama = nama;
         this.email = email;
         this.telepon = telepon;
+        this.instagram = instagram;
+        this.facebook = facebook;
+        this.t = telepon;
         this.admin = admin;
     }
 

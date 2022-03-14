@@ -10,13 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class CreateUserActivity extends AppCompatActivity {
     private String uid;
-    private EditText nama, telepon, angkatan;
+    private TextInputEditText nama, telepon, angkatan;
     private DatabaseReference database;
 
     @Override
@@ -24,9 +25,9 @@ public class CreateUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
 
-        nama    = findViewById(R.id.editNama);
-        telepon = findViewById(R.id.editTelepon);
-        angkatan   = findViewById(R.id.editAngkatan);
+        nama    = (TextInputEditText)findViewById(R.id.editNama);
+        telepon = (TextInputEditText)findViewById(R.id.editTelepon);
+        angkatan   = (TextInputEditText)findViewById(R.id.editAngkatan);
 
         //ambil referensi Firebase
         database = FirebaseDatabase.getInstance().getReference();

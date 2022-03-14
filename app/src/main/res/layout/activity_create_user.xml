@@ -5,46 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="10dp"
-    android:paddingVertical="20dp"
+    android:padding="20dp"
     tools:context=".CreateUserActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LENGKAPI PROFIL"
-        android:paddingBottom="20dp"
+        android:text="Register"
         android:fontFamily="sans-serif-black"
-        android:textSize="20sp"/>
+        android:textSize="30sp"
+        android:textColor="@color/firebase_red"/>
 
-    <EditText
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create your profile"
+        android:textSize="18sp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Lengkap"
-        android:inputType="text"
-        android:id="@+id/editNama"
-        android:paddingBottom="10dp"/>
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telepon"
-        android:inputType="phone"
-        android:id="@+id/editTelepon"
-        android:paddingBottom="10dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Angkatan"
-        android:id="@+id/editAngkatan"
-        android:inputType="textEmailAddress"
-        android:paddingBottom="10dp"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telepon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTelepon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Angkatan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editAngkatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Instagram">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editIG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Facebook">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editFB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Twitter">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#fff"
         android:text="Simpan"
+        android:background="@drawable/round_btn"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:id="@+id/btnSimpan"/>
 
 

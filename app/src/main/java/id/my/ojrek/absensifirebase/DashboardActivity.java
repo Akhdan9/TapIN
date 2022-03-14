@@ -70,6 +70,7 @@ public class DashboardActivity extends AppCompatActivity implements LocationList
     private StorageReference storageReference;
     String uid;
 
+
     //definisi komponen UI
     TextView tvNama, tvEmail, tvHariTanggal, tvLokasi;
     Button btnHadir, btnPulang;
