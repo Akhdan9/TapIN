@@ -10,16 +10,18 @@ public class Users implements Serializable {
     private String instagram;
     private String facebook;
     private String twitter;
-    private Boolean admin;
 
-    public Users(String nama, String email, String telepon, String instagram, String facebook, String twitter, Boolean admin) {
+    public Users(String nama, String email, String telepon, String instagram, String facebook, String twitter) {
         this.nama = nama;
         this.email = email;
         this.telepon = telepon;
         this.instagram = instagram;
         this.facebook = facebook;
         this.twitter = twitter;
-        this.admin = admin;
+    }
+
+    public Users() {
+
     }
 
     public String getUid() {
@@ -78,11 +80,4 @@ public class Users implements Serializable {
         this.twitter = twitter;
     }
 
-    public Boolean getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(Boolean admin) {
-        this.admin = admin;
-    }
 }

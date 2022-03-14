@@ -57,7 +57,7 @@ public class CreateUserActivity extends AppCompatActivity {
 
                 } else {
                     //susun data sesuai model
-                    Users users = new Users(n, m, t, i, f, w, false);
+                    Users users = new Users(n, m, t, i, f, w);
                     //akses ke (table) users
                     database.child("users")
                             .child(uid) //buat child (primary key berdasar uid auth)
