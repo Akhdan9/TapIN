@@ -90,6 +90,7 @@ public class DashboardActivity extends AppCompatActivity implements LocationList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //inisialisasi komponen UI
         tvNama = findViewById(R.id.tvNama);
@@ -226,14 +227,14 @@ public class DashboardActivity extends AppCompatActivity implements LocationList
         });
 
         //fungsikan btnLogout
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firebaseAuth.signOut();
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                finish();
-            }
-        });
+//        btnLogout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                firebaseAuth.signOut();
+//                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+//                finish();
+//            }
+//        });
 
         //fungsikan btnKamera
         btnKamera.setOnClickListener(new View.OnClickListener() {

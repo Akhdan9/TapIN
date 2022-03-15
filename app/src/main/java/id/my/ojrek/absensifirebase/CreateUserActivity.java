@@ -67,7 +67,7 @@ public class CreateUserActivity extends AppCompatActivity {
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(CreateUserActivity.this, "Data user berhasil disimpan", Toast.LENGTH_SHORT).show();
                                     //lanjut ke dashboard
-                                    startActivity(new Intent(CreateUserActivity.this, DashboardActivity.class));
+                                    startActivity(new Intent(CreateUserActivity.this, ProfileActivity.class));
                                     finish();
                                 }
                             });

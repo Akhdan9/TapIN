@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         //periksa apakah user sudah login
         FirebaseUser currentUser = firebaseAuth.getCurrentUser();
         if(currentUser != null){
-            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+            startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
             finish();
         }
     }
@@ -149,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
                         //jika sukses
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+                            startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
                         } else {
                             Toast.makeText(LoginActivity.this, "Login gagal, pastikan User dan Password benar", Toast.LENGTH_SHORT).show();
                         }
