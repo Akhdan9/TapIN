@@ -28,9 +28,6 @@ public class CreateUserActivity extends AppCompatActivity {
         nama    = (TextInputEditText)findViewById(R.id.editNama);
         telepon = (TextInputEditText)findViewById(R.id.editTelepon);
         angkatan   = (TextInputEditText)findViewById(R.id.editAngkatan);
-        instagram   = (TextInputEditText)findViewById(R.id.editIG);
-        facebook = (TextInputEditText)findViewById(R.id.editFB);
-        twitter = (TextInputEditText)findViewById(R.id.editTW);
 
         //ambil referensi Firebase
         database = FirebaseDatabase.getInstance().getReference();
@@ -48,16 +45,13 @@ public class CreateUserActivity extends AppCompatActivity {
                 String n = nama.getText().toString().trim();
                 String m = angkatan.getText().toString().trim();
                 String t = telepon.getText().toString().trim();
-                String i = instagram.getText().toString().trim();
-                String f = facebook.getText().toString().trim();
-                String w = twitter.getText().toString().trim();
 
                 if(TextUtils.isEmpty(n) && TextUtils.isEmpty(t) && TextUtils.isEmpty(m)){
                     Toast.makeText(CreateUserActivity.this, "Nama, Telepon, Angkatan Harus diisi", Toast.LENGTH_LONG).show();
 
                 } else {
                     //susun data sesuai model
-                    Users users = new Users(n, m, t, i, f, w);
+                    Users users = new Users(n, m, t);
                     //akses ke (table) users
                     database.child("users")
                             .child(uid) //buat child (primary key berdasar uid auth)

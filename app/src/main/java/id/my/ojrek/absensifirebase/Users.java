@@ -5,19 +5,14 @@ import java.io.Serializable;
 public class Users implements Serializable {
     private String uid;
     private String nama;
-    private String email;
+    private String angkatan;
     private String telepon;
-    private String instagram;
-    private String facebook;
-    private String twitter;
 
-    public Users(String nama, String email, String telepon, String instagram, String facebook, String twitter) {
+
+    public Users(String nama, String angkatan, String telepon) {
         this.nama = nama;
-        this.email = email;
+        this.angkatan = angkatan;
         this.telepon = telepon;
-        this.instagram = instagram;
-        this.facebook = facebook;
-        this.twitter = twitter;
     }
 
     public Users() {
@@ -40,12 +35,12 @@ public class Users implements Serializable {
         this.nama = nama;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAngkatan() {
+        return angkatan;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAngkatan(String angkatan) {
+        this.angkatan = angkatan;
     }
 
     public String getTelepon() {
@@ -56,28 +51,5 @@ public class Users implements Serializable {
         this.telepon = telepon;
     }
 
-    public String getInstagram() {
-        return instagram;
-    }
-
-    public void setInstagram(String instagram) {
-        this.instagram = instagram;
-    }
-
-    public String getFacebook() {
-        return facebook;
-    }
-
-    public void setFacebook(String facebook){
-        this.facebook = facebook;
-    }
-
-    public String getTwitter(){
-        return twitter;
-    }
-
-    public void setTwitter(){
-        this.twitter = twitter;
-    }
 
 }

@@ -1,9 +1,12 @@
 package id.my.ojrek.absensifirebase;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,19 +14,57 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.storage.FirebaseStorage;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    TextInputLayout fullname, email, phone, angkatan;
+    TextInputEditText fullname, phone, angkatan;
     TextView fullNameLabel, usernameLabel;
+    ImageView ivIG, ivFB, ivLinked;
     private FirebaseAuth firebaseAuth;
+    String uid;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        ivIG = (ImageView) findViewById(R.id.ivIG);
+        ivFB = (ImageView) findViewById(R.id.ivFB);
+        ivLinked = (ImageView) findViewById(R.id.ivLinked);
+
+        ivIG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.instagram.com"));
+                startActivity(intent);
+            }
+        });
+
+        ivFB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.facebook.com"));
+                startActivity(intent);
+            }
+        });
+
+        ivLinked.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.linkedin.com"));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -49,15 +90,4 @@ public class ProfileActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    public void setMode(int selectedMode) {
-//        switch(selectedMode){
-//            case R.id.absen_menu:
-//                Toast.makeText(this, "tes tekan", Toast.LENGTH_LONG).show();
-//                break;
-//
-//            case R.id.logout_menu:
-//                Toast.makeText(this, "tes logout", Toast.LENGTH_LONG).show();
-//                break;
-//        }
-//    }
 }
